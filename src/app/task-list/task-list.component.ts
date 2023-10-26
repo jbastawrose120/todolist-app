@@ -7,7 +7,11 @@ import { Task } from '../task.model'; // Import the Task interface
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent {
-  tasks: Task[] = []; // Array to store tasks
+  tasks:Task[]  = [
+    { id: 1, title: 'Buy groceries', completed: false },
+    { id: 2, title: 'Finish project', completed: false },
+    { id: 3, title: 'Go to the gym', completed: true },
+  ];
 
   // Function to create a new task
   addTask(title: string) {
@@ -18,4 +22,6 @@ export class TaskListComponent {
     };
     this.tasks.push(newTask);
   }
+
+
 }
